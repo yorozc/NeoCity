@@ -13,7 +13,34 @@ body{
 }
 
 .gate-container{
-    border: 1px solid yellow;
     height: 500px;
     width: 500px;
 }
+
+.gate{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:flex-end;
+}
+.door{
+    width: 200px;
+    height: 200px;
+    background-color: brown;
+    border-bottom: 0;
+}
+
+.left-door{
+    border-radius: 75% 0 0 0; /*Top-left, Top-right, Bot-Left, Bot-right*/
+}
+
+.right-door{
+    border-radius: 0 75% 0 0;
+}
+
+.bot-half-door{
+    background-color: brown;
+    width: 200px;
+    height: 200px;
+}
+
