@@ -5,7 +5,7 @@
 }
 
 :root{
-    --duration: 4s;
+    --duration: 5.5s;
 } 
 
 body{
@@ -27,6 +27,7 @@ body{
     justify-content: center;
     align-items:flex-end;
     position: relative;
+    border: 1px solid pink;
 }
 
 .open-gates-guf{ /*placed behind gates, will show when gates open*/
@@ -45,7 +46,7 @@ body{
     border-bottom: 0;
     position: relative;
     z-index: 2;
-    transform-origin: bottom;
+    transform-origin: center bottom;
     transform-style: preserve-3d;
     animation-duration: var(--duration);
     animation-fill-mode: forwards;
@@ -53,13 +54,10 @@ body{
 
 .left-door{
     border-radius: 75% 0 0 0; /*Top-left, Top-right, Bot-Left, Bot-right*/
-    animation-name: openLeft;
-
 }
 
 .right-door{
     border-radius: 0 75% 0 0;
-    animation-name: openRight;
 }
 
 .bot-half-door{
@@ -69,14 +67,6 @@ body{
     transition: transform 4s ease;
 }
 
-.bot-left{
-    animation-name: openLeft;
-}
-
-.bot-right{
-    animation-name: openRight;
-}
-
 @keyframes openLeft{
     0%{
 
@@ -84,7 +74,7 @@ body{
 
     100%{
         
-        transform: translateX(-180px) rotateY(-180deg);
+        transform: translateX(-200px) rotateY(-180deg);
     }
 }
 
@@ -96,6 +86,6 @@ body{
 
     100%{
         animation-duration: var(--duration);
-        transform: translateX(180px) rotateY(-180deg);
+        transform: translateX(200px) rotateY(-180deg);
     }
 }
