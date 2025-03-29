@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+:root{
+    --duration: 4s;
+} 
+
 body{
     background-image: url('Resources/gufBG.jpg');
     height: 100vh;
@@ -15,7 +19,6 @@ body{
 .gate-container{
     height: 500px;
     width: 500px;
-    isolation: isolate;
 }
 
 .gate{
@@ -42,59 +45,57 @@ body{
     border-bottom: 0;
     position: relative;
     z-index: 2;
-    transform-origin: center bottom;
+    transform-origin: bottom;
     transform-style: preserve-3d;
+    animation-duration: var(--duration);
+    animation-fill-mode: forwards;
 }
 
 .left-door{
     border-radius: 75% 0 0 0; /*Top-left, Top-right, Bot-Left, Bot-right*/
-    animation-name: openGate-left;
-    animation-duration: 4s;
-    animation-fill-mode: forwards;
-    
+    animation-name: openLeft;
 
 }
 
 .right-door{
     border-radius: 0 75% 0 0;
-    animation-duration: 4s;
-    animation-fill-mode: forwards;
-    animation-name: openGate-right;
+    animation-name: openRight;
 }
 
 .bot-half-door{
     background-color: brown;
     width: 200px;
     height: 200px;
-    animation-duration: 4s;
-    animation-fill-mode: forwards;
+    transition: transform 4s ease;
 }
 
 .bot-left{
-    animation-name: openGate-left;
+    animation-name: openLeft;
 }
 
 .bot-right{
-    animation-name: openGate-right;
+    animation-name: openRight;
 }
 
-@keyframes openGate-left{
+@keyframes openLeft{
     0%{
 
     }
 
     100%{
-        transform: translateX(-200px) rotateY(-180deg);
+        
+        transform: translateX(-180px) rotateY(-180deg);
     }
 }
 
-@keyframes openGate-right {
+
+@keyframes openRight{
     0%{
 
     }
 
     100%{
-        transform: translateX(200px) rotateY(-180deg);
+        animation-duration: var(--duration);
+        transform: translateX(180px) rotateY(-180deg);
     }
 }
-
