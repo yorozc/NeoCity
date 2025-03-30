@@ -5,7 +5,7 @@
 }
 
 :root{
-    --duration: 5.5s;
+    --duration: 3s;
 } 
 
 body{
@@ -27,7 +27,6 @@ body{
     justify-content: center;
     align-items:flex-end;
     position: relative;
-    border: 1px solid pink;
 }
 
 .open-gates-guf{ /*placed behind gates, will show when gates open*/
@@ -57,17 +56,17 @@ body{
 
 .right-door{
     border-radius: 0 75% 0 0;
-    animation-name: openRight;
+    
     transform-origin: right;
 }
 
 .bot-left, .left-door{
-    animation-name: openLeft;
+    
     transform-origin: left;
 }
 
 .bot-right, .right-door{
-    animation-name: openRight;
+    
     transform-origin: right;
 }
 
