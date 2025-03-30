@@ -46,7 +46,6 @@ body{
     border-bottom: 0;
     position: relative;
     z-index: 2;
-    transform-origin: center bottom;
     transform-style: preserve-3d;
     animation-duration: var(--duration);
     animation-fill-mode: forwards;
@@ -58,26 +57,36 @@ body{
 
 .right-door{
     border-radius: 0 75% 0 0;
+    animation-name: openRight;
+    transform-origin: right;
+}
+
+.bot-left, .left-door{
+    animation-name: openLeft;
+    transform-origin: left;
+}
+
+.bot-right, .right-door{
+    animation-name: openRight;
+    transform-origin: right;
 }
 
 .bot-half-door{
     background-color: brown;
     width: 200px;
     height: 200px;
-    transition: transform 4s ease;
 }
+
 
 @keyframes openLeft{
     0%{
-
+       
     }
 
     100%{
-        
-        transform: translateX(-200px) rotateY(-180deg);
+        transform: rotateY(-180deg);
     }
 }
-
 
 @keyframes openRight{
     0%{
@@ -85,7 +94,6 @@ body{
     }
 
     100%{
-        animation-duration: var(--duration);
-        transform: translateX(200px) rotateY(-180deg);
+        transform:  rotateY(-180deg);
     }
 }
