@@ -5,7 +5,7 @@
 }
 
 :root{
-    --duration: 3s;
+    --duration: 7.5s;
 } 
 
 body{
@@ -19,6 +19,7 @@ body{
 .gate-container{
     height: 500px;
     width: 500px;
+    border: 1px solid red;
 }
 
 .gate{
@@ -27,13 +28,14 @@ body{
     justify-content: center;
     align-items:flex-end;
     position: relative;
+    border: 1px solid pink;
 }
 
 .open-gates-guf{ /*placed behind gates, will show when gates open*/
+    background: url(Resources/ss050.jpg);
     width: 400px;
     height: 400px;
     border-radius: 75% 75% 0 0; /* change this to 100% when opening gates*/
-    background-color: white;
     z-index: 0;
     position: absolute;
 }
